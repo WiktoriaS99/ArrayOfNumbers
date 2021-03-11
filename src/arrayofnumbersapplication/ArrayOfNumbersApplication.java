@@ -64,7 +64,8 @@ public class ArrayOfNumbersApplication {
                 + "\n1: Get a number from array"
                 + "\n2: Change a number in array"
                 + "\n3: Find highest number in array"
-                + "\n4: Check if values are equal");
+                + "\n4: Check if values are equal"
+                + "\n5: Find GCD of numbers in array");
             
             
             //get user choice
@@ -127,7 +128,18 @@ public class ArrayOfNumbersApplication {
                         {
                            System.out.println("\nNumbers are not equal.");  
                         }
-                    break;    
+                    break;
+                    
+                    
+                    //find GCD of numbers in array
+                    case 5:
+                        System.out.println("\nPosition of first value in array: ");
+                        int intC = input.nextInt();
+                        System.out.println("\nPosition of second value in array: ");
+                        int intD = input.nextInt();
+                        int gcdResult = arrA.gcd(intC, intD);
+                        System.out.println("\nThe GCD is: " + gcdResult); 
+                    break;
                 }
             }
     }
