@@ -63,7 +63,8 @@ public class ArrayOfNumbersApplication {
             System.out.println("\nMenu options:"
                 + "\n1: Get a number from array"
                 + "\n2: Change a number in array"
-                + "\n3: Find highest number in array");
+                + "\n3: Find highest number in array"
+                + "\n4: Check if values are equal");
             
             
             //get user choice
@@ -77,7 +78,6 @@ public class ArrayOfNumbersApplication {
                 }
                 else 
                 {
-                    String wrongType = input.next();
                     usrChoice = -1;
                 }
                 
@@ -110,7 +110,24 @@ public class ArrayOfNumbersApplication {
                         int highNo = arrA.max();
                         System.out.println(highNo);
                     break;
-                        
+                    
+                    
+                    //check if values are equal
+                    case 4:
+                        System.out.println("\nPosition of first value in array: ");
+                        int intA = input.nextInt();
+                        System.out.println("\nPosition of second value in array: ");
+                        int intB = input.nextInt();
+                        boolean equal = arrA.equal(intA, intB);
+                        if (equal == true)
+                        {
+                           System.out.println("\nNumbers are equal."); 
+                        }
+                        else
+                        {
+                           System.out.println("\nNumbers are not equal.");  
+                        }
+                    break;    
                 }
             }
     }

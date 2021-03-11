@@ -55,4 +55,9 @@ public class ArrayOfNumbers {
         }
         return max;
     }
+    
+    public boolean equal(int a, int b)
+    {
+       return this.storageArray[a] == this.storageArray[b];
+    }
 }
