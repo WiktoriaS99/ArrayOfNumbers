@@ -32,4 +32,27 @@ public class ArrayOfNumbers {
        }
    }
     
+      public int item(int itemPos)
+    {     
+        int thisval = this.storageArray[itemPos];
+        return thisval;
+    }
+    
+    public void setItem(int a, int b)
+    {
+        this.storageArray[a] = b;
+    }
+    
+    public int max()
+    {
+        int max = this.storageArray[0];
+        for(int i = 0; i<this.storageArray.length; i++)
+        {
+            if(this.storageArray[i] > max)
+            {
+                max = this.storageArray[i];
+            }
+        }
+        return max;
+    }
 }
