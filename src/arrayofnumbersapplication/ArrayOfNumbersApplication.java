@@ -166,6 +166,24 @@ public class ArrayOfNumbersApplication {
                         int average = arrA.average();
                         System.out.println("\nAverage of numbers in array are: " + average); 
                     break;
+                    
+                    
+                    //multiply all array values by a number
+                    case 9:
+                        System.out.println("\nNumber for multiplying the numbers of array: ");
+                        int multiplier = input.nextInt();
+                        int[] scalar = arrA.scalarMultiply(multiplier);
+                        System.out.println("\nThe new array values are: " + Arrays.toString(scalar));
+                    break;
+                    
+                    
+                    //add a number to all array values
+                    case 10:
+                        System.out.println("\nNumber for adding to the numbers of array: ");
+                        int add = input.nextInt();
+                        int[] addConstant = arrA.addConstant(add);
+                        System.out.println("\nThe new array values are: " + Arrays.toString(addConstant));
+                    break;
                 }
             }
     }
