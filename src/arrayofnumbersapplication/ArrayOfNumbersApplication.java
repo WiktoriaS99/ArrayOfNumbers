@@ -65,12 +65,17 @@ public class ArrayOfNumbersApplication {
                 + "\n2: Change a number in array"
                 + "\n3: Find highest number in array"
                 + "\n4: Check if values are equal"
-                + "\n5: Find GCD of numbers in array");
+                + "\n5: Find GCD of numbers in array"
+                + "\n6: Count numbers in array"
+                + "\n7: Find total of numbers in array"
+                + "\n8: Find average of numbers in array"
+                + "\n9: Multiply all array values by a number"
+                + "\n10: Add a number to all array values");
             
             
             //get user choice
             int usrChoice = 0;
-            while(usrChoice >= 0 && usrChoice <= 6)
+            while(usrChoice >= 0 && usrChoice <= 10)
             {
                 System.out.println("\nPlease choose an action: ");
                 if(input.hasNextInt())
@@ -139,6 +144,27 @@ public class ArrayOfNumbersApplication {
                         int intD = input.nextInt();
                         int gcdResult = arrA.gcd(intC, intD);
                         System.out.println("\nThe GCD is: " + gcdResult); 
+                    break;
+                    
+                    
+                    //count numbers in array
+                    case 6:
+                        int count = arrA.count();
+                        System.out.println("\nOverall numbers in array are: " + count); 
+                    break;
+                    
+                    
+                    //find total of numbers in array
+                    case 7:
+                        int sum = arrA.sum();
+                        System.out.println("\nSum of all numbers in array are: " + sum); 
+                    break;
+                    
+                    
+                    //find average of numbers in array
+                    case 8:
+                        int average = arrA.average();
+                        System.out.println("\nAverage of numbers in array are: " + average); 
                     break;
                 }
             }
