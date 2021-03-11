@@ -60,4 +60,71 @@ public class ArrayOfNumbers {
     {
        return this.storageArray[a] == this.storageArray[b];
     }
+    
+    public int gcd(int a, int b) 
+    {
+        while (a != b)
+        {
+            if (a > b)
+            {
+                a = a-b;
+            }
+            else 
+            {
+                b = b-a;
+            }
+        }
+        return a;
+    }
+    
+    public int count()
+    {
+        int count = 0;
+        for(int a=0; a < this.storageArray.length; a++)
+        {
+            count++;
+        }
+        return count;
+    }
+    
+    public int sum()
+    {
+        int total = 0;
+        for(int a=0; a < this.storageArray.length; a++)
+        {
+            total += this.storageArray[a];
+        }
+        return total;
+    }
+        
+    public int average()
+    {
+        int total = 0;
+        int average;
+        
+        for(int a=0; a < this.storageArray.length; a++)
+        {
+            total += this.storageArray[a];
+        }
+        average = total/this.storageArray.length;
+        return average;
+    }
+    
+    public int[] scalarMultiply(int a)
+    {
+        for(int b=0; b<this.storageArray.length; b++)
+        {
+            this.storageArray[b] = this.storageArray[b] * a;
+        }
+        return this.storageArray;
+    }
+    
+    public int[] addConstant(int a)
+    {
+        for(int b=0; b<this.storageArray.length; b++)
+        {
+            this.storageArray[b] = this.storageArray[b] + a;
+        }
+        return this.storageArray;
+    }
 }
